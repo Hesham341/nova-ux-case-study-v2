@@ -329,3 +329,32 @@ img{display:block;max-width:100%}
 .first-click-note h3{font-size:19px;line-height:1.35;margin:0 0 8px}
 .first-click-note p{font-size:13px;line-height:1.8;color:#5c6d86}
 @media(max-width:690px){.first-click-note{grid-template-columns:1fr;gap:9px;padding:24px}}
+
+.artifact-details{margin-top:22px;background:#fff;border:1px solid #dce5f0;border-radius:15px;overflow:hidden}
+.artifact-details summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:23px 26px}
+.artifact-details summary::-webkit-details-marker{display:none}
+.artifact-details summary strong{font-family:Manrope,sans-serif;font-size:16px;color:#18345b;display:block;letter-spacing:-.02em}
+.artifact-details summary small{display:block;font-size:12px;color:#7e8ca1;margin-top:2px}
+.artifact-toggle{width:30px;height:30px;display:grid;place-items:center;border:1px solid #d5e0ec;border-radius:50%;color:var(--blue);font-size:19px;line-height:1;flex:none;transition:transform .2s}
+.artifact-details[open] .artifact-toggle{transform:rotate(45deg)}
+.artifact-content{padding:0 26px 29px;border-top:1px solid #edf1f6}
+.artifact-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-top:24px}
+.artifact-grid figure{margin:0;min-width:0}
+.artifact-grid a{display:flex;align-items:center;justify-content:center;background:#fafcfe;min-height:210px;border:1px solid #e4ebf3;border-radius:12px;overflow:hidden;padding:10px}
+.artifact-grid a:focus-visible{outline-offset:3px}
+.artifact-grid img{width:100%;max-height:270px;object-fit:contain}
+.artifact-grid figcaption{font-size:12px;font-weight:700;color:#6d7c90;margin-top:8px}
+.artifact-context{font-size:13px;color:#586a82;line-height:1.85;margin-top:26px}
+.artifact-context strong{color:#233b61}
+.research-insights{margin-bottom:34px}
+.survey-facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:0 0 68px}
+.survey-facts>div{display:flex;gap:17px;align-items:center;border:1px solid #d9e6f5;background:#f2f7ff;padding:19px 21px;border-radius:12px}
+.survey-facts strong{font-family:Manrope,sans-serif;font-size:32px;letter-spacing:-.05em;color:var(--blue);white-space:nowrap}
+.survey-facts span{font-size:12px;color:#4e6380;line-height:1.5;font-weight:600}
+.survey-facts>p{grid-column:1 / -1;color:#8693a4;font-size:11px;margin-top:0}
+@media(max-width:690px){
+.artifact-details summary{padding:19px 17px}.artifact-content{padding:0 17px 19px}
+.artifact-grid{grid-template-columns:1fr}.artifact-grid a{min-height:170px}
+.survey-facts{grid-template-columns:1fr;margin-bottom:48px}
+.survey-facts>p{grid-column:auto}
+}
