@@ -1,6 +1,6 @@
 # Nova Travel | UX Case Study
 
-An editorial case study presenting the research, design decisions, prototype screens and usability findings behind Nova Travel, a solo UX/UI course project by Hesham Shahwan.
+An editorial case study presenting the research, design decisions, prototype screens and usability findings behind Nova Travel, a solo UX/UI bootcamp concept project by Hesham Shahwan.
 
 ## Live site
 
@@ -12,7 +12,8 @@ https://hesham-nova-case-study.pages.dev/
 - Research findings connected to specific interface decisions.
 - An original mobile booking concept, journey map and sitemap.
 - Five moderated usability sessions with task success, completion time and ease ratings.
-- Iteration examples, including a before-and-after hotel result card.
+- Two usability-led before/after examples: a clearer hotel breakfast label and a more recognizable Packages icon.
+- Original screenshots presented in consistent device frames, with a transparent favicon.
 
 ## Implementation
 
