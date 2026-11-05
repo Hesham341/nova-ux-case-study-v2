@@ -1,136 +1,188 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="theme-color" content="#081b31"/>
-  <meta name="description" content="Nova Travel: a detailed UX case study by Hesham Shahwan, from user research and personas to usability testing and design iteration."/>
-  <meta property="og:title" content="Nova Travel | UX Case Study — Hesham Shahwan"/>
-  <meta property="og:description" content="A more thoughtful way to explore, plan, and book travel. Follow the research, prototype and usability-testing journey behind Nova."/>
-  <meta property="og:type" content="website"/>
-  <title>Nova Travel | UX Case Study — Hesham Shahwan</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#102b60">
+  <meta name="description" content="Nova Travel, an end-to-end UX case study by Hesham Shahwan. Discover the research, personas, Figma screens, usability results and evidence-driven improvements.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nova Travel | UX Case Study">
+  <meta property="og:description" content="From fragmented travel planning to a clearer booking journey. Explore the original research, design decisions, and usability testing behind Nova.">
+  <title>Nova Travel | UX Case Study by Hesham Shahwan</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <div class="progress" id="progress"></div>
-  <header class="site-header" id="siteHeader">
-    <a class="brand" href="#top" aria-label="Nova home"><span class="brand-symbol" aria-hidden="true">✳</span><span>nova<span class="brand-point">.</span></span><span class="brand-sep"></span><span class="brand-detail">A UX CASE STUDY</span></a>
-    <nav class="desktop-nav" aria-label="Case study sections">
-      <a href="#challenge">Challenge</a><a href="#research">Research</a><a href="#solution">Solution</a><a href="#validation">Validation</a>
+<a href="#main" class="skip-link">Skip to case study</a>
+<div class="reading-progress" id="progress" aria-hidden="true"></div>
+<header class="site-header" id="siteHeader">
+  <div class="shell nav-shell">
+    <a href="#top" class="wordmark" aria-label="Nova case study home"><span class="wordmark-icon" aria-hidden="true">✳</span><span>nova<span class="wordmark-dot">.</span></span><span class="wordmark-sub">CASE STUDY</span></a>
+    <nav class="desktop-nav" aria-label="Page sections">
+      <a href="#challenge">The challenge</a><a href="#process">Process</a><a href="#research">Research</a><a href="#design">Design</a><a href="#testing">Testing</a>
     </nav>
-    <a href="https://www.behance.net/gallery/243951099/Nova-Travel-App" target="_blank" rel="noreferrer" class="header-action">Original on Behance <span aria-hidden="true">↗</span></a>
-    <button class="mobile-menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span></button>
-    <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation"><a href="#challenge">Challenge</a><a href="#research">Research</a><a href="#solution">Solution</a><a href="#validation">Validation</a><a href="#reflection">Reflection</a><a href="https://www.behance.net/gallery/243951099/Nova-Travel-App" target="_blank" rel="noreferrer">Original on Behance ↗</a></nav>
-  </header>
+    <a class="header-figma" href="https://www.figma.com/design/kJxHsQFszhQFYbSMobkirQ/Portfolio?node-id=0-1" target="_blank" rel="noopener noreferrer">View in Figma <span aria-hidden="true">↗</span></a>
+    <button id="menuButton" type="button" class="menu-button" aria-label="Open navigation" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile page sections"><a href="#challenge">The challenge</a><a href="#process">Process</a><a href="#research">Research</a><a href="#design">Design</a><a href="#testing">Testing</a><a href="#reflection">Reflection</a><a href="https://www.figma.com/design/kJxHsQFszhQFYbSMobkirQ/Portfolio?node-id=0-1" target="_blank" rel="noopener noreferrer">Open original Figma ↗</a></nav>
+</header>
 
-  <main id="main">
-    <section class="hero" id="top">
-      <div class="hero-glow hero-glow-a" aria-hidden="true"></div><div class="hero-glow hero-glow-b" aria-hidden="true"></div>
-      <div class="hero-shell container">
-        <div class="hero-copy">
-          <div class="eyebrow inverse"><span class="mini-star">✳</span> THE COMPLETE UX STORY <span class="eyebrow-line"></span> 2025–2026</div>
-          <h1>Travel planning,<br/><em>without the</em><br/><span>turbulence.</span></h1>
-          <p class="hero-lead">Designing one calmer place to discover destinations, book confidently, and keep every journey together.</p>
-          <div class="hero-chips"><span>Product design</span><span>Mobile app</span><span>UX research</span></div>
-          <a class="round-link" href="#overview"><span class="round-arrow">↓</span><span>Explore the case study</span></a>
-        </div>
-        <div class="hero-stage" aria-label="Stylized Nova mobile travel application concepts">
-          <div class="hero-orbit"></div>
-          <div class="hero-image-panel"><div class="hero-image-overlay"></div><span class="hero-image-caption">YOUR NEXT DESTINATION AWAITS <b>✴</b></span></div>
-          <div class="phone hero-phone">
-            <div class="phone-screen">
-              <div class="phone-status"><span>9:41</span><span>●●● ▰</span></div>
-              <div class="app-header"><span class="app-nova">nova<span>.</span></span><span class="avatar">HS</span></div>
-              <div class="app-welcome">Where to next,<br/><strong>explorer?</strong> <span>✳</span></div>
-              <div class="app-search"><span>⌕</span> Find your next getaway <span>⌘</span></div>
-              <div class="app-categories"><div><span class="cat-icon">✈</span><small>Flights</small></div><div><span class="cat-icon">▤</span><small>Hotels</small></div><div><span class="cat-icon">🚗</span><small>Cars</small></div><div><span class="cat-icon">✦</span><small>Packages</small></div></div>
-              <div class="app-row-head"><b>Discover places</b><small>See all →</small></div>
-              <div class="destination-card"><div class="destination-shade"></div><span class="destination-tag">A CITY TO REMEMBER</span><div class="destination-name">Barcelona<span>Spain · Europe</span></div><div class="destination-circle">↗</div></div>
-              <div class="app-bottom"><span class="selected">⌂<small>Explore</small></span><span>▦<small>Bookings</small></span><span>♡<small>Saved</small></span><span>☰<small>More</small></span></div>
-            </div>
-          </div>
-          <div class="floating-note flight-note"><div class="note-plane">✈</div><div><small>ALL YOUR PLANS</small><strong>One beautiful place.</strong></div><span class="flight-note-check">✓</span></div>
-          <div class="floating-note rating-note"><span class="rating-stars">★★★★★</span><strong>Designed around real journeys</strong><small>Research-led. Tested with users.</small></div>
-          <span class="hero-spark hero-spark-one">✳</span><span class="hero-spark hero-spark-two">✦</span>
-        </div>
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="shell hero-shell">
+      <div class="hero-copy">
+        <span class="eyebrow light-eyebrow"><span class="eyebrow-line"></span> UX / UI DESIGN CASE STUDY</span>
+        <h1 id="hero-title">Travel planning,<br><em>made clearer.</em></h1>
+        <p class="hero-lede">Nova is a mobile travel concept that brings discovery, booking, and trip management into one thoughtful experience.</p>
+        <div class="hero-ctas"><a href="#challenge" class="btn btn-white">Explore the story <span aria-hidden="true">↘</span></a><a href="#design" class="text-link light-link">See the final screens <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-meta"><span>Hesham Shahwan</span><span>Independent UX/UI project</span><span>2025–2026</span></div>
       </div>
-      <div class="hero-bottom container"><span>SCROLL TO EXPLORE</span><span>UX CASE STUDY <span class="hero-bottom-dot">●</span> HESHAM SHAHWAN</span></div>
-    </section>
-
-    <section class="overview-section section-pad" id="overview">
-      <div class="container">
-        <div class="chapter-line"><span class="chapter-index">00 / THE BRIEF</span><span class="chapter-dash"></span><span>START HERE</span></div>
-        <div class="overview-layout"><div><div class="overline">INTRODUCING NOVA</div><h2 class="section-title">The journey is the fun part.<br/><span>Planning should be, too.</span></h2></div><div class="overview-side"><p>Nova is a mobile travel app concept bringing flights, hotels, cars, packages and trip management into one simple experience. This case study follows the design process from understanding travelers to validating a Figma prototype.</p><div class="meta-table"><div><span>MY ROLE</span><b>UX/UI Designer & Researcher</b></div><div><span>PLATFORM</span><b>Mobile application concept</b></div><div><span>METHODS</span><b>Research · Prototyping · Testing</b></div><div><span>TOOLS</span><b>Figma · Lyssna</b></div></div></div></div>
-        <div class="stat-strip"><div><b>03<span>+</span></b><span>Research personas</span></div><div><b>05</b><span>Usability participants</span></div><div><b>03</b><span>Core flows tested</span></div><div><b>100<span>%</span></b><span>Task completion in tests</span></div></div>
+      <div class="hero-art" aria-label="Three original Nova mobile application mockups from the Figma design">
+        <div class="art-glow" aria-hidden="true"></div>
+        <img class="phone phone-left" src="assets/hero-search.png" width="377" height="794" alt="Original Nova mobile search results screen" decoding="async">
+        <img class="phone phone-center" src="assets/hero-package.png" width="377" height="794" alt="Original Nova travel package results screen showing pricing and included amenities" decoding="async">
+        <img class="phone phone-right" src="assets/hero-trips.png" width="377" height="794" alt="Original Nova mobile app screen" decoding="async">
+        <div class="original-tag">Screens from the original Figma project</div>
       </div>
-    </section>
-
-    <section class="challenge-section section-pad" id="challenge">
-      <div class="container"><div class="chapter-line dark"><span class="chapter-index">01 / THE CHALLENGE</span><span class="chapter-dash"></span><span>WHY NOVA EXISTS</span></div>
-        <div class="challenge-top"><div><div class="overline coral">A FRAGMENTED EXPERIENCE</div><h2 class="section-title light">Great trips begin with<br/><i>too many tabs.</i></h2></div><p>Travelers compare offers in one app, verify details in another, and track bookings somewhere else. The challenge was to make trip planning feel less like admin and more like anticipation.</p></div>
-        <div class="problem-grid">
-          <article class="problem-card"><span class="problem-number">01</span><span class="problem-icon">↗ ↙</span><h3>Scattered planning</h3><p>Flights, hotels, activities and bookings live across disconnected platforms.</p></article>
-          <article class="problem-card"><span class="problem-number">02</span><span class="problem-icon">$ ?</span><h3>Unclear real costs</h3><p>Hidden fees and difficult comparisons make confident decisions harder.</p></article>
-          <article class="problem-card"><span class="problem-number">03</span><span class="problem-icon">◎</span><h3>Trust takes work</h3><p>Reviews, relevant filters and reliable information can be difficult to assess.</p></article>
-        </div>
-        <div class="challenge-quote"><span class="big-quote">“</span><blockquote>How might we help travelers <em>plan and book in one place</em>, with less friction and more confidence?</blockquote><span class="hwmw-tag">HOW MIGHT WE</span></div>
-      </div>
-    </section>
-
-    <section class="research-section section-pad" id="research"><div class="container">
-      <div class="chapter-line"><span class="chapter-index">02 / RESEARCH & DISCOVERY</span><span class="chapter-dash"></span><span>LISTEN BEFORE DESIGNING</span></div>
-      <div class="research-intro"><div><div class="overline">LOOKING FOR PATTERNS</div><h2 class="section-title">Less guessing.<br/><span>More understanding.</span></h2></div><p>Interviews, survey findings and persona work helped shape the design around what travelers actually care about: value, trust, clarity and convenience.</p></div>
-      <div class="method-layout"><div class="method-highlight"><div class="method-top"><span>RESEARCH APPROACH</span><span>↗</span></div><div class="method-big">People<br/><em>before pixels.</em></div><div class="method-bottom"><span class="method-pill">INTERVIEWS</span><span class="method-pill">SURVEY INSIGHTS</span><span class="method-pill">PERSONAS</span></div></div><div class="findings-list">
-        <div class="finding"><span>01</span><div><h3>Value must be visible.</h3><p>Travelers want clear total pricing and easy ways to compare meaningful options.</p></div><span>↗</span></div>
-        <div class="finding"><span>02</span><div><h3>Everything, together.</h3><p>Finding, booking and organizing a trip should feel connected, not fragmented.</p></div><span>↗</span></div>
-        <div class="finding"><span>03</span><div><h3>Trust is part of the UI.</h3><p>Recognizable labels, credible information and relevant details build confidence.</p></div><span>↗</span></div>
-        <div class="finding"><span>04</span><div><h3>Different people, different trips.</h3><p>Solo travelers, groups and families arrive with very different priorities.</p></div><span>↗</span></div>
-      </div></div>
-      <div class="personas-heading"><span>MEET THE TRAVELERS</span><p>Three personas synthesized from the research to keep decisions grounded.</p></div>
-      <div class="persona-grid">
-        <article class="persona-card persona-one"><div class="persona-art"><span class="persona-person">D</span><span class="persona-decor">✳</span></div><div class="persona-copy"><small>PERSONA 01 / VALUE SEEKER</small><h3>Daniel Costa</h3><p>Wants fair prices, transparent fees and a straightforward way to compare options.</p><div class="persona-focus"><span>DESIGN FOCUS</span><b>Price transparency</b></div></div></article>
-        <article class="persona-card persona-two"><div class="persona-art"><span class="persona-person">L</span><span class="persona-decor">✦</span></div><div class="persona-copy"><small>PERSONA 02 / GROUP EXPLORER</small><h3>Liam Chen</h3><p>Wants to plan with friends quickly, find central stays and avoid complicated flows.</p><div class="persona-focus"><span>DESIGN FOCUS</span><b>Faster discovery</b></div></div></article>
-        <article class="persona-card persona-three"><div class="persona-art"><span class="persona-person">F</span><span class="persona-decor">✳</span></div><div class="persona-copy"><small>PERSONA 03 / FAMILY PLANNER</small><h3>Fatimah Al-Harbi</h3><p>Needs family-friendly and culturally relevant options she can trust.</p><div class="persona-focus"><span>DESIGN FOCUS</span><b>Relevant, trusted filters</b></div></div></article>
-      </div>
-      </div></section>
-
-    <section class="process-section section-pad"><div class="container"><div class="chapter-line"><span class="chapter-index">03 / FROM INSIGHT TO STRUCTURE</span><span class="chapter-dash"></span><span>MAKING SENSE OF THE JOURNEY</span></div>
-      <div class="process-intro"><div><div class="overline">THE DESIGN PROCESS</div><h2 class="section-title">A clear route<br/><span>from problem to prototype.</span></h2></div><p>Research informed the navigation and information architecture before moving into wireframes and a high-fidelity Figma experience.</p></div>
-      <div class="process-steps"><div class="process-step"><span class="process-step-num">01</span><span class="process-icon">◎</span><h3>Discover</h3><p>Interview travelers and review survey findings.</p></div><div class="process-step"><span class="process-step-num">02</span><span class="process-icon">▦</span><h3>Define</h3><p>Personas, pain points and key travel needs.</p></div><div class="process-step"><span class="process-step-num">03</span><span class="process-icon">⌘</span><h3>Design</h3><p>Structure, wireframes and high-fidelity UI.</p></div><div class="process-step"><span class="process-step-num">04</span><span class="process-icon">✓</span><h3>Validate</h3><p>Moderated tests and design iterations.</p></div></div>
-      <div class="journey-bar"><span>THE CORE NAVIGATION</span><div><b>Explore</b><span>→</span><b>Book</b><span>→</span><b>Choose</b><span>→</span><b>Confirm</b><span>→</span><b>My Trips</b></div></div>
-    </div></section>
-
-    <section class="solution-section section-pad" id="solution"><div class="container"><div class="chapter-line dark"><span class="chapter-index">04 / THE DESIGN</span><span class="chapter-dash"></span><span>ONE JOURNEY, ONE PLACE</span></div>
-      <div class="solution-intro"><div><div class="overline coral">MEET THE EXPERIENCE</div><h2 class="section-title light">A travel app that<br/><i>feels like an escape.</i></h2></div><p>One home for discovery, booking and trip management. The visuals below reinterpret Nova’s documented screens for this presentation, rather than reproduce exact Figma exports.</p></div>
-      <div class="solution-grid">
-        <div class="feature-panel feature-panel-one"><div class="feature-panel-top"><span>01 / DISCOVER</span><span>✳</span></div><h3>Find your next<br/><em>somewhere.</em></h3><p>Clear entry points for flights, hotels, cars and complete packages.</p><div class="feature-demo feature-demo-search"><div class="demo-search-top"><b>Discover</b><span>✦</span></div><div class="demo-search-input">⌕ &nbsp; Where would you like to go?</div><div class="demo-search-actions"><span>✈ Flight</span><span>▤ Hotel</span><span>✦ Package</span></div><div class="demo-image"><span>BARCELONA, SPAIN</span><strong>Make memories<br/>worth keeping.</strong></div></div></div>
-        <div class="feature-panel feature-panel-two"><div class="feature-panel-top"><span>02 / CHOOSE</span><span>✳</span></div><h3>Details that make<br/><em>decisions easier.</em></h3><p>Recognizable filters and easier-to-scan hotel information.</p><div class="hotel-demo"><div class="hotel-demo-img"></div><div class="hotel-demo-body"><div class="hotel-demo-mini">BARCELONA · GOTHIC QUARTER</div><strong>Hotel Mediterráneo</strong><span class="hotel-rating">★ 4.5 <small>(320 reviews)</small></span><div class="hotel-filters"><span>✓ Breakfast included</span><span>Free cancellation</span></div><div class="hotel-demo-bottom"><b>$518</b><span>per person · incl. taxes</span><span class="hotel-demo-arrow">↗</span></div></div></div></div>
-        <div class="feature-panel feature-panel-three"><div class="feature-panel-top"><span>03 / ORGANIZE</span><span>✳</span></div><h3>Every plan.<br/><em>Right where you need it.</em></h3><p>Current, saved and previous trips organized in one familiar place.</p><div class="trips-demo"><div class="trips-demo-head"><strong>My Trips</strong><span>⌕</span></div><div class="trip-tabs"><span class="current">Upcoming</span><span>Past trips</span><span>Saved</span></div><div class="trip-card"><div class="trip-card-image"></div><div><small>JAN 15 — JAN 22</small><b>Barcelona, Spain</b><span>Flight + Hotel + Car</span></div><span class="trip-arrow">↗</span></div><div class="trip-card smaller"><div class="trip-card-icon">✈</div><div><small>FEB 03 — FEB 10</small><b>Rome, Italy</b><span>Flight booking</span></div><span class="trip-arrow">↗</span></div></div></div>
-      </div>
-      <div class="palette-row"><span>DESIGN LANGUAGE</span><div class="palette-swatches"><div style="--swatch:#162c54"><span>#162C54</span></div><div style="--swatch:#719cff"><span>#719CFF</span></div><div style="--swatch:#f2a482"><span>#F2A482</span></div><div style="--swatch:#e5f0ef"><span>#E5F0EF</span></div><div style="--swatch:#fff9f0"><span>#FFF9F0</span></div></div><span>Calm · Friendly · Clear</span></div>
-    </div></section>
-
-    <section class="validation-section section-pad" id="validation"><div class="container"><div class="chapter-line"><span class="chapter-index">05 / VALIDATION & ITERATION</span><span class="chapter-dash"></span><span>DESIGN IS A CONVERSATION</span></div>
-    <div class="validation-heading"><div><div class="overline">TEST. LEARN. REFINE.</div><h2 class="section-title">Real feedback.<br/><span>Real design decisions.</span></h2></div><p>Five people tested three core tasks in moderated sessions. All three tasks reached 100% completion in this small test group, but time and perceived ease revealed where the design needed work.</p></div>
-    <div class="testing-summary"><div><span>5</span><p>Participants</p></div><div><span>3</span><p>Scenarios</p></div><div><span>10–15<small>min</small></span><p>Per session</p></div><div><span>100<small>%</small></span><p>Task completion*</p></div></div>
-    <div class="validation-board"><div class="validation-board-head"><div><span class="validation-label">USABILITY RESULTS</span><h3>What the tests told us</h3></div><div class="chart-legend"><span class="legend-dot"></span> Time to complete <small>SEQ / 7</small></div></div>
-      <div class="result-grid"><div class="result-row"><div><span>01 / HOTEL FINDER</span><h4>Find a hotel with breakfast</h4></div><div class="result-track"><span style="--pct:68%"></span></div><b>2m 26s</b><small>5.4 / 7</small></div><div class="result-row"><div><span>02 / TRAVEL PACKAGE</span><h4>Book a combined package</h4></div><div class="result-track"><span style="--pct:100%"></span></div><b>3m 35s</b><small>5.0 / 7</small></div><div class="result-row"><div><span>03 / MY TRIPS</span><h4>Check a booked trip's price</h4></div><div class="result-track"><span style="--pct:8%"></span></div><b>16s</b><small>6.6 / 7</small></div></div>
-      <div class="board-bottom"><span>* Prototype study with 5 participants, not a production performance claim.</span><span>SEQ = SINGLE EASE QUESTION (1–7)</span></div>
     </div>
-    <div class="iteration-heading"><span>FROM OBSERVATION TO ACTION</span><h3>Small changes. <em>Clearer journeys.</em></h3></div>
-    <div class="iteration-grid"><article class="iteration-card"><div class="iteration-card-label"><span>ITERATION 01</span><span>HOTEL INFORMATION</span></div><div class="iteration-visual"><div class="iteration-before"><small>BEFORE</small><div class="mock-chip-row"><span>Best value</span><span>Top booked</span></div><div class="mock-card-title">Hotel Mediterráneo</div><div class="muted-lines"><span></span><span></span></div><div class="tiny-label">Breakfast included</div></div><div class="iteration-divider">→</div><div class="iteration-after"><small>AFTER</small><div class="mock-chip-row"><span class="active-chip">✓ Breakfast included</span></div><div class="mock-card-title">Hotel Mediterráneo</div><div class="muted-lines"><span></span><span></span></div><div class="tiny-label emphasized">Easy-to-spot amenity</div></div></div><div class="iteration-card-copy"><h4>Make breakfast impossible to miss.</h4><p>Participants struggled to find a hotel with breakfast. Filter pills were given a more prominent visual treatment and stronger typography for faster scanning.</p></div></article>
-    <article class="iteration-card"><div class="iteration-card-label"><span>ITERATION 02</span><span>NAVIGATION CLARITY</span></div><div class="iteration-visual icons-iteration"><div class="icon-before"><small>BEFORE</small><div class="iteration-icon-box">▣</div><b>Packages</b><p>Ambiguous symbol</p></div><div class="iteration-divider">→</div><div class="icon-after"><small>AFTER</small><div class="iteration-icon-box">✈ <span>▤</span> 🚗</div><b>Packages</b><p>Flight + hotel + car</p></div></div><div class="iteration-card-copy"><h4>Show what a package includes.</h4><p>Some participants hesitated on “Packages.” A clearer combined icon helped communicate bundled travel options without adding extra instructions.</p></div></article></div>
-    <div class="test-takeaway"><span>THE BIGGEST TAKEAWAY</span><p>Success alone doesn't mean a flow is effortless. <strong>Behavior, hesitation, and clarity matter too.</strong></p></div>
-    </div></section>
+  </section>
 
-    <section class="reflection-section section-pad" id="reflection"><div class="container"><div class="chapter-line dark"><span class="chapter-index">06 / THE REFLECTION</span><span class="chapter-dash"></span><span>WHAT I LEARNED</span></div><div class="reflection-layout"><div><div class="overline coral">LOOKING BACK</div><h2 class="section-title light">Good design starts<br/>with <i>better questions.</i></h2><p>Nova reinforced a simple principle: even a successful task can hide unnecessary effort. Research helps us choose what to build, and testing helps us see what needs to change. The most valuable part of this project was connecting real observations to specific design decisions.</p><div class="reflection-tags"><span>Listen deeply</span><span>Design intentionally</span><span>Test early</span></div></div><div class="closing-graphic"><span class="closing-orbit orbit-one"></span><span class="closing-orbit orbit-two"></span><span class="closing-nova">nova<span>.</span></span><span class="closing-small">THE NEXT JOURNEY STARTS HERE</span><span class="closing-asterisk">✳</span></div></div></div></section>
-    <section class="end-section"><div class="container end-layout"><div><div class="end-kicker">THAT'S A WRAP <span>✳</span></div><h2>Thanks for<br/><em>coming along.</em></h2><p>Enjoyed the process? Explore the original full case study or see more work.</p></div><div class="end-actions"><a class="primary-cta" href="https://www.behance.net/gallery/243951099/Nova-Travel-App" target="_blank" rel="noreferrer">Original Behance case study <span>↗</span></a><a class="secondary-cta" href="https://hesham-shahwan.pages.dev" target="_blank" rel="noreferrer">More projects by Hesham <span>↗</span></a></div></div><div class="container footer-line"><div>© 2026 Hesham Shahwan · Nova concept case study</div><div>Designed to be explored <span>✳</span></div></div></section>
-  </main>
+  <section class="case-facts" aria-label="Project details"><div class="shell facts-grid">
+    <div><span class="fact-label">PROJECT</span><strong>Nova Travel</strong></div>
+    <div><span class="fact-label">MY ROLE</span><strong>End-to-end UX/UI</strong></div>
+    <div><span class="fact-label">PLATFORM</span><strong>Mobile app concept</strong></div>
+    <div><span class="fact-label">METHODS</span><strong>Research → Testing</strong></div>
+  </div></section>
+
+  <section class="section section-problem" id="challenge">
+    <div class="shell">
+      <div class="section-intro two-column">
+        <div><span class="eyebrow"><span class="eyebrow-line"></span> 01 / THE CHALLENGE</span><h2>A great trip shouldn't start with <span class="accent">too many tabs.</span></h2></div>
+        <div class="intro-aside"><p>Travelers piece together flights, hotels, reviews, itineraries and bookings across different platforms. Every switch adds friction and makes decisions harder.</p><p class="aside-small">The opportunity: create one clear place to explore options, understand what you're paying for, and keep plans organized.</p></div>
+      </div>
+      <div class="problem-cards">
+        <article class="problem-card"><span class="card-index">01</span><h3>Scattered planning</h3><p>Research revealed how often people jump between services to plan a single trip.</p></article>
+        <article class="problem-card"><span class="card-index">02</span><h3>Unclear total costs</h3><p>Comparing offers becomes difficult when taxes, fees, and included services are hard to find.</p></article>
+        <article class="problem-card"><span class="card-index">03</span><h3>Fragmented management</h3><p>Travelers want their upcoming trips, booking details, and important information together.</p></article>
+      </div>
+      <div class="problem-statement"><div><span class="statement-kicker">DESIGN QUESTION</span><h3>How might we make planning a trip feel more connected, transparent, and manageable?</h3></div><span class="statement-symbol" aria-hidden="true">↗</span></div>
+    </div>
+  </section>
+
+  <section class="section section-process" id="process">
+    <div class="shell">
+      <div class="section-intro compact"><span class="eyebrow"><span class="eyebrow-line"></span> 02 / THE APPROACH</span><h2>Start with people.<br>Then shape the product.</h2><p>I followed a Double Diamond-inspired process, moving from broad discovery to focused decisions, designs, and validation.</p></div>
+      <div class="process-track" aria-label="The four stages of the design process">
+        <article class="process-step"><span class="process-number">01</span><div class="process-icon" aria-hidden="true">⌕</div><h3>Discover</h3><p>Competitive research, interviews, surveys.</p></article>
+        <article class="process-step"><span class="process-number">02</span><div class="process-icon" aria-hidden="true">◇</div><h3>Define</h3><p>Affinity mapping, personas, journeys, IA.</p></article>
+        <article class="process-step"><span class="process-number">03</span><div class="process-icon" aria-hidden="true">▦</div><h3>Design</h3><p>User flows, wireframes, final UI, prototype.</p></article>
+        <article class="process-step"><span class="process-number">04</span><div class="process-icon" aria-hidden="true">✓</div><h3>Validate</h3><p>Moderated usability and preference testing.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-research" id="research">
+    <div class="shell">
+      <div class="section-intro two-column">
+        <div><span class="eyebrow"><span class="eyebrow-line"></span> 03 / RESEARCH & SYNTHESIS</span><h2>Three needs kept <span class="accent">coming up.</span></h2></div>
+        <div class="intro-aside"><p>Survey findings, interviews, and synthesis pointed toward a consistent set of needs: value, trust, and simplicity.</p><p class="aside-small">These findings guided the information architecture and what I chose to prioritize in the interface.</p></div>
+      </div>
+      <div class="research-insights">
+        <article class="insight"><span class="insight-bullet">01</span><h3>Make value obvious</h3><p>Show what's included and make pricing easier to compare before a traveler commits.</p></article>
+        <article class="insight"><span class="insight-bullet">02</span><h3>Keep it in one place</h3><p>Connect discovery, booking options, and trip details in a cohesive mobile journey.</p></article>
+        <article class="insight"><span class="insight-bullet">03</span><h3>Respect different needs</h3><p>Travelers have different priorities, from speed and budget to family-friendly, halal-conscious choices.</p></article>
+      </div>
+
+      <div class="personas-header"><div><span class="small-label">RESEARCH OUTPUT</span><h3>Meet the travelers behind the decisions.</h3></div><p>Three personas were developed from the research to represent different planning behaviors.</p></div>
+      <div class="persona-grid">
+        <article class="persona-card">
+          <img src="assets/persona-daniel.png" width="179" height="179" loading="lazy" alt="Persona portrait used in the original Figma file for Daniel Costa">
+          <div class="persona-copy"><span class="persona-type">THE VALUE SEEKER</span><h4>Daniel Costa</h4><p>Compares options carefully and wants clear, complete prices before booking.</p><div class="persona-need"><span>DESIGN NEED</span><strong>Transparent total costs and easy comparisons.</strong></div></div>
+        </article>
+        <article class="persona-card">
+          <img src="assets/persona-liam.png" width="179" height="179" loading="lazy" alt="Persona portrait used in the original Figma file for Liam Chen">
+          <div class="persona-copy"><span class="persona-type">THE QUICK PLANNER</span><h4>Liam Chen</h4><p>Organizes short trips with friends and wants to move from idea to plan quickly.</p><div class="persona-need"><span>DESIGN NEED</span><strong>Fast discovery and less unnecessary detail.</strong></div></div>
+        </article>
+        <article class="persona-card">
+          <img src="assets/persona-fatimah.png" width="179" height="179" loading="lazy" alt="Persona portrait used in the original Figma file for Fatimah Al-Harbi">
+          <div class="persona-copy"><span class="persona-type">THE FAMILY ORGANIZER</span><h4>Fatimah Al-Harbi</h4><p>Plans around family needs and values trustworthy, culturally suitable options.</p><div class="persona-need"><span>DESIGN NEED</span><strong>Confidence, clarity, and relevant travel options.</strong></div></div>
+        </article>
+      </div>
+      <p class="caption source-caption">Personas and their portraits are taken from the original Nova Figma case study. The personas are research representations, not photographed test participants.</p>
+    </div>
+  </section>
+
+  <section class="section section-decisions">
+    <div class="shell">
+      <div class="section-intro two-column"><div><span class="eyebrow"><span class="eyebrow-line"></span> 04 / DESIGN DIRECTION</span><h2>Turning findings into <span class="accent">clear choices.</span></h2></div><div class="intro-aside"><p>Instead of adding more features to the experience, I focused on making the important actions easier to recognize.</p></div></div>
+      <div class="decision-list">
+        <div class="decision-row"><span>01 / FIND</span><h3>One starting point</h3><p>Flights, hotels, cars, packages, trip ideas, and travel agencies are available from Nova's Book screen.</p></div>
+        <div class="decision-row"><span>02 / UNDERSTAND</span><h3>Visible trip value</h3><p>Result cards expose ratings, inclusions, price information, and key conditions for easier comparisons.</p></div>
+        <div class="decision-row"><span>03 / MANAGE</span><h3>Trips stay accessible</h3><p>A dedicated My Trips destination helps users revisit upcoming, saved, and past plans.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-design" id="design">
+    <div class="shell">
+      <div class="section-intro two-column">
+        <div><span class="eyebrow"><span class="eyebrow-line"></span> 05 / THE SOLUTION</span><h2>Designed around <span class="accent">the journey.</span></h2></div>
+        <div class="intro-aside"><p>From a clear Book hub to trip management, the screens below come directly from my original Figma designs, not recreated illustrations.</p><a class="inline-arrow" href="https://www.figma.com/design/kJxHsQFszhQFYbSMobkirQ/Portfolio?node-id=153-68472" target="_blank" rel="noopener noreferrer">Explore all original screens in Figma ↗</a></div>
+      </div>
+      <div class="featured-ui">
+        <div class="ui-explanation"><span class="feature-num">FEATURE 01</span><h3>Book, without the guesswork.</h3><p>A single hub gives people obvious entry points to search flights, hotels, cars, or a complete package.</p><div class="feature-note"><span class="note-dot" aria-hidden="true"></span><span>Six clear booking and discovery entry points.</span></div></div>
+        <div class="ui-image-panel"><img src="assets/app-home.png" width="230" height="512" loading="lazy" alt="Original Nova Book home screen with Flights, Hotels, Cars, Packages, Trip Ideas, Travel Agency and recent searches"><span class="ui-caption">BOOK / HOME SCREEN</span></div>
+      </div>
+      <div class="ui-secondary-grid">
+        <article class="ui-detail-card"><div class="detail-art"><img src="assets/app-my-trips.png" width="230" height="512" loading="lazy" alt="Original Nova My Trips screen with tabs for all, upcoming, saved and past trips"></div><div class="detail-copy"><span>FEATURE 02</span><h3>Everything after booking, together.</h3><p>Upcoming, saved, and past trips have a dedicated home instead of getting lost between services.</p></div></article>
+        <article class="ui-detail-card"><div class="detail-art"><img src="assets/app-recent.png" width="230" height="512" loading="lazy" alt="Original Nova recent searches screen"></div><div class="detail-copy"><span>FEATURE 03</span><h3>Pick up where you left off.</h3><p>Recent searches help users return to destinations and options they were already exploring.</p></div></article>
+      </div>
+      <div class="wireframe-strip"><div><span class="small-label">FROM LOW TO HIGH FIDELITY</span><h3>The structure came first.</h3><p>Early wireframes mapped essential actions before visual refinement. The final interface builds on that foundation.</p></div><div class="wireframe-visual"><img src="assets/wireframe-signin.png" width="230" height="512" loading="lazy" alt="Original low-fidelity Nova sign in wireframe"><span class="wireframe-arrow" aria-label="developed into">→</span><img src="assets/app-sign-up.png" width="230" height="512" loading="lazy" alt="Original high-fidelity Nova sign up interface"></div></div>
+      <p class="caption">Screen images are original Figma exports. Nova is a UX/UI design concept, not a live booking service.</p>
+    </div>
+  </section>
+
+  <section class="section section-testing" id="testing">
+    <div class="shell">
+      <div class="section-intro two-column">
+        <div><span class="eyebrow"><span class="eyebrow-line"></span> 06 / VALIDATION</span><h2>Successful tasks.<br><span class="accent">Better questions.</span></h2></div>
+        <div class="intro-aside"><p>Five moderated usability sessions tested the Figma prototype using realistic booking and trip-management scenarios.</p><p class="aside-small">Task success, completion time, and a 1–7 Single Ease Question (SEQ) rating helped separate task completion from the effort it took.</p></div>
+      </div>
+      <div class="test-stats"><div><strong>5</strong><span>moderated participants</span></div><div><strong>3</strong><span>task scenarios</span></div><div><strong>100%</strong><span>success in all 3 tasks</span></div></div>
+      <div class="table-wrap"><table class="results-table">
+        <thead><tr><th scope="col">TEST SCENARIO</th><th scope="col">TASK SUCCESS</th><th scope="col">AVG. TIME</th><th scope="col">AVG. EASE / 7</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Find a hotel with breakfast</strong><span>Barcelona, family trip</span></td><td><span class="success-mark">100%</span></td><td>2m 26s</td><td>5.4</td></tr>
+          <tr><td><strong>Choose a travel package</strong><span>Flight + hotel, halal-food need</span></td><td><span class="success-mark">100%</span></td><td>3m 35s</td><td>5.0</td></tr>
+          <tr><td><strong>Check a booked trip's price</strong><span>Find Barcelona in My Trips</span></td><td><span class="success-mark">100%</span></td><td>16s</td><td>6.6</td></tr>
+        </tbody>
+      </table></div>
+      <p class="caption">Results from the Nova moderated usability testing report, January 27–February 4, 2026. Small exploratory sample (n=5); these findings informed design iteration, not claims of broad product performance.</p>
+
+      <div class="iteration">
+        <div class="iteration-copy"><span class="small-label">WHAT CHANGED / 01</span><h3>Make the important detail impossible to miss.</h3><p>Participants completed the hotel task, but several spent too long locating the breakfast-included option.</p><div class="observation"><span>OBSERVATION</span><p>Key amenities were easy to overlook while scanning hotel results.</p></div><div class="observation design-change"><span>DESIGN CHANGE</span><p>The breakfast label received a more prominent pill treatment and stronger visual emphasis.</p></div></div>
+        <div class="comparison"><figure><span>BEFORE</span><img src="assets/test-before.png" width="380" height="464" loading="lazy" alt="Original Figma before iteration hotel card, where breakfast information was less prominent"></figure><figure><span>AFTER</span><img src="assets/test-after.png" width="380" height="464" loading="lazy" alt="Original Figma after iteration hotel card emphasizing the Breakfast included pill"></figure></div>
+      </div>
+      <div class="learning-cards">
+        <article><span class="small-label">WHAT CHANGED / 02</span><h3>Explain packages at a glance.</h3><p>Some participants hesitated at the Packages entry point. I updated the icon to communicate the combined flight, hotel, and car offering more clearly.</p></article>
+        <article><span class="small-label">WHAT WORKED / 03</span><h3>My Trips was already easy to find.</h3><p>Participants located their Barcelona booking and checked the price in an average of 16 seconds, with an average 6.6/7 ease rating.</p></article>
+      </div>
+      <div class="preference">
+        <div><span class="eyebrow"><span class="eyebrow-line"></span> ALSO TESTED / PREFERENCE</span><h3>More detail won, but only narrowly.</h3><p>In the trip-summary preference test, participants chose the more detailed Version A over the shorter Version B. I kept Version A because it made key booking information clearer to this small test group.</p></div>
+        <div class="preference-bars" role="img" aria-label="Preference test results: 60 percent chose Version A; 40 percent chose Version B"><div class="bar-label"><span>Version A <small>More detail · selected</small></span><strong>60%</strong></div><div class="bar-track"><span class="bar-fill a" style="width:60%"></span></div><div class="bar-label"><span>Version B <small>Shorter summary</small></span><strong>40%</strong></div><div class="bar-track"><span class="bar-fill b" style="width:40%"></span></div><p class="caption">Preference testing recorded in the original Figma case study; not a statistically conclusive result.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-reflection" id="reflection">
+    <div class="shell reflection-grid"><div><span class="eyebrow light-eyebrow"><span class="eyebrow-line"></span> 07 / REFLECTION</span><h2>Completion doesn't always mean <em>clarity.</em></h2></div><div><p>One of the most important lessons from Nova was that all five users could finish the tasks, yet some still struggled to spot essential information. Testing showed where hierarchy and recognition mattered more than adding another feature.</p><p>Nova helped me connect research, interaction design, and usability findings into a single process: understand the need, make a design decision, then test whether it helped.</p><div class="reflection-actions"><a href="https://www.figma.com/design/kJxHsQFszhQFYbSMobkirQ/Portfolio?node-id=0-1" target="_blank" rel="noopener noreferrer" class="btn btn-white">See the full Figma work ↗</a><a href="https://www.behance.net/gallery/243951099/Nova-Travel-App" target="_blank" rel="noopener noreferrer" class="text-link light-link">Original Behance case study ↗</a></div></div></div>
+  </section>
+</main>
+
+<footer class="site-footer"><div class="shell footer-grid"><div><a href="#top" class="footer-logo">nova<span>.</span></a><p>UX/UI case study by Hesham Shahwan.<br>Built around the original project research and designs.</p></div><div><a href="https://hesham-shahwan.pages.dev" target="_blank" rel="noopener noreferrer">My portfolio ↗</a><a href="https://www.behance.net/gallery/243951099/Nova-Travel-App" target="_blank" rel="noopener noreferrer">Original Behance ↗</a><a href="https://www.figma.com/design/kJxHsQFszhQFYbSMobkirQ/Portfolio?node-id=0-1" target="_blank" rel="noopener noreferrer">Figma source ↗</a></div></div><div class="shell footer-end"><span>Nova is a concept project. Images sourced from the original Figma file.</span><a href="#top">Back to top ↑</a></div></footer>
 </body>
 </html>

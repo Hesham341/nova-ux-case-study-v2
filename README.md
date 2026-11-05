@@ -1,16 +1,29 @@
-# Nova Travel — UX Case Study Redesign
+# Nova UX Case Study · V2
 
-An independent experimental, responsive presentation of Hesham Shahwan's Nova UX case study. The original Behance project and portfolio are **not modified**.
+A simpler, source-grounded editorial presentation of Hesham Shahwan's **Nova Travel** UX/UI case study.
 
-## Sources
-- Original Behance case study: https://www.behance.net/gallery/243951099/Nova-Travel-App
-- Original project usability test plan, usability report, persona sheets, survey findings in the designer's Drive.
-- 5 moderated usability tests; 3 tasks; each had 100% completion among the 5 test participants.
+**Live:** https://hesham341.github.io/nova-ux-case-study-v2/
 
-## Accuracy note
-The stylized Nova app screen mockups are **visual reinterpretations for this editorial presentation**, not exported Figma frames, and do not represent a shipped product. The reported usability metrics are from the designer's existing test report.
+**Source of truth:** [Original Figma project](https://www.figma.com/design/kJxHsQFszhQFYbSMobkirQ/Portfolio?node-id=0-1)
 
-## Preview
-Open index.html in a browser or serve with `python -m http.server 8765`.
+**Original publication:** [Behance case study](https://www.behance.net/gallery/243951099/Nova-Travel-App)
 
-No build step or dependencies. Scenic images are fetched from Unsplash; fallback backgrounds remain if blocked. Google Fonts are optional.
+## What changed
+
+- Removed approximate/reimagined app screens and placeholders.
+- Replaced phone mockups, persona portraits, key final UI screens, wireframe example and hotel-card before/after with **original exports from the Figma source file**.
+- Focused the storytelling on problem → research → design decisions → final UI → usability findings → iteration.
+- Preserved exact moderated-testing results from the original Nova research: 5 participants; 3 tasks; 100% success per task; times 2m26s, 3m35s, 16s; SEQ 5.4, 5.0, 6.6.
+- Clearly labeled this as a *design concept* rather than a live travel product.
+
+## Site
+
+Simple static HTML, CSS, and JavaScript with no backend, no client framework, and no external image dependencies. Font requests use Google Fonts with system fallbacks.
+
+## Asset provenance
+
+Files under \`assets/\` are direct exports or rendered source nodes from the user's original Figma design file. They're included as static editorial case-study images (not newly invented screens). The persona portraits are original Figma persona representations, **not** photos of the test participants.
+
+The Figma integration returned blank 1×1 renders for some large prototype frames. Those were intentionally excluded rather than replaced with inaccurate visual recreations. All incorporated assets are stored locally in this repository.
+
+Original Behance and Figma files remain unchanged.

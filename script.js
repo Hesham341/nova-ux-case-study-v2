@@ -1,14 +1,50 @@
-const navButton = document.querySelector('#menuButton');
-const navMenu = document.querySelector('#mobileNav');
-const header = document.querySelector('#siteHeader');
-const progress = document.querySelector('#progress');
-const navLinks = [...document.querySelectorAll('.desktop-nav a')];
-const sections = [...document.querySelectorAll('main section[id]')];
-function closeMenu(){navButton.setAttribute('aria-expanded','false');navButton.setAttribute('aria-label','Open navigation');navMenu.classList.remove('open');}
-navButton.addEventListener('click',()=>{const open=navButton.getAttribute('aria-expanded')==='true';navButton.setAttribute('aria-expanded',String(!open));navButton.setAttribute('aria-label',open?'Open navigation':'Close navigation');navMenu.classList.toggle('open',!open);});
-navMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
-document.addEventListener('click',e=>{if(!header.contains(e.target))closeMenu();});
-function syncScroll(){const max=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);progress.style.transform=`scaleX(${window.scrollY/max})`;header.classList.toggle('scrolled',window.scrollY>16);let active='';for(const s of sections)if(s.getBoundingClientRect().top<180)active=s.id;navLinks.forEach(a=>{if(a.getAttribute('href')==='#'+active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});}
-window.addEventListener('scroll',syncScroll,{passive:true});window.addEventListener('resize',syncScroll);syncScroll();
-if('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches){const o=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('entered');o.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.problem-card,.persona-card,.feature-panel,.iteration-card,.finding,.process-step').forEach(e=>{e.classList.add('to-reveal');o.observe(e);});}
+(() => {
+  const button=document.querySelector('#menuButton');
+  const menu=document.querySelector('#mobileNav');
+  const progress=document.querySelector('#progress');
+  const navLinks=[...document.querySelectorAll('.desktop-nav a')];
+  const sections=[...document.querySelectorAll('main section[id]')];
+
+  function closeMenu(){
+    if(!button||!menu)return;
+    button.setAttribute('aria-expanded','false');
+    button.setAttribute('aria-label','Open navigation');
+    menu.classList.remove('open');
+  }
+
+  if(button && menu){
+    button.addEventListener('click',()=>{
+      const opened=button.getAttribute('aria-expanded')==='true';
+      button.setAttribute('aria-expanded',String(!opened));
+      button.setAttribute('aria-label',opened?'Open navigation':'Close navigation');
+      menu.classList.toggle('open',!opened);
+    });
+    menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+    document.addEventListener('keydown',event=>{if(event.key==='Escape')closeMenu();});
+    document.addEventListener('click',event=>{
+      if(!event.target.closest('.site-header'))closeMenu();
+    });
+  }
+
+  function updateReadingProgress(){
+    const total=document.documentElement.scrollHeight-window.innerHeight;
+    if(progress)progress.style.width=(total>0?Math.max(0,Math.min(100,window.scrollY/total*100)):0)+'%';
+  }
+  updateReadingProgress();
+  window.addEventListener('scroll',updateReadingProgress,{passive:true});
+  window.addEventListener('resize',updateReadingProgress,{passive:true});
+
+  if('IntersectionObserver' in window && navLinks.length){
+    const observer=new IntersectionObserver(entries=>{
+      for(const entry of entries){
+        if(!entry.isIntersecting)continue;
+        navLinks.forEach(a=>{
+          const active=a.getAttribute('href')==='#'+entry.target.id;
+          a.classList.toggle('active',active);
+          if(active)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');
+        });
+      }
+    },{rootMargin:'-18% 0px -68% 0px',threshold:0});
+    sections.forEach(section=>observer.observe(section));
+  }
+})();
