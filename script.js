@@ -27,6 +27,18 @@
   }
 
 
+
+  // On narrow screens, show one legible wireframe or final screen at a time.
+  document.querySelectorAll('.wireframe-panel').forEach(panel=>{
+    const stageButtons=[...panel.querySelectorAll('[data-wireframe-stage]')];
+    const showcase=panel.querySelector('.wireframe-showcase');
+    stageButtons.forEach(button=>button.addEventListener('click',()=>{
+      const stage=button.dataset.wireframeStage;
+      if(showcase)showcase.dataset.mobileStage=stage;
+      stageButtons.forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
+    }));
+  });
+
   // Keyboard-accessible wireframe comparisons.
   const frameTabs=[...document.querySelectorAll('[data-wireframe-tab]')];
   function selectFrameTab(tab,focus=false){
