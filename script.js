@@ -26,6 +26,34 @@
     });
   }
 
+
+  // Keyboard-accessible wireframe comparisons.
+  const frameTabs=[...document.querySelectorAll('[data-wireframe-tab]')];
+  function selectFrameTab(tab,focus=false){
+    if(!tab)return;
+    frameTabs.forEach(item=>{
+      const active=item===tab;
+      item.setAttribute('aria-selected',String(active));
+      item.tabIndex=active?0:-1;
+      const panel=document.getElementById('wireframe-panel-'+item.dataset.wireframeTab);
+      if(panel)panel.hidden=!active;
+    });
+    if(focus)tab.focus();
+  }
+  frameTabs.forEach((tab,index)=>{
+    tab.addEventListener('click',()=>selectFrameTab(tab));
+    tab.addEventListener('keydown',e=>{
+      let next=index;
+      if(e.key==='ArrowRight')next=(index+1)%frameTabs.length;
+      else if(e.key==='ArrowLeft')next=(index-1+frameTabs.length)%frameTabs.length;
+      else if(e.key==='Home')next=0;
+      else if(e.key==='End')next=frameTabs.length-1;
+      else return;
+      e.preventDefault();
+      selectFrameTab(frameTabs[next],true);
+    });
+  });
+
   function updateReadingProgress(){
     const total=document.documentElement.scrollHeight-window.innerHeight;
     if(progress)progress.style.width=(total>0?Math.max(0,Math.min(100,window.scrollY/total*100)):0)+'%';

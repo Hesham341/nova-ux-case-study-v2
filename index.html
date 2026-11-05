@@ -30,9 +30,10 @@
     <nav class="desktop-nav" aria-label="Page sections">
       <a href="#challenge">The challenge</a><a href="#process">Process</a><a href="#research">Research</a><a href="#design">Design</a><a href="#testing">Testing</a>
     </nav>
+    <a class="original-case-link" href="https://www.behance.net/gallery/243951099/Nova-Travel-App" target="_blank" rel="noopener noreferrer">Original on Behance</a>
     <button id="menuButton" type="button" class="menu-button" aria-label="Open navigation" aria-controls="mobileNav" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
-  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile page sections"><a href="#challenge">The challenge</a><a href="#process">Process</a><a href="#research">Research</a><a href="#design">Design</a><a href="#testing">Testing</a><a href="#reflection">Reflection</a></nav>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile page sections"><a href="#challenge">The challenge</a><a href="#process">Process</a><a href="#research">Research</a><a href="#design">Design</a><a href="#testing">Testing</a><a href="#reflection">Reflection</a><a class="mobile-original-link" href="https://www.behance.net/gallery/243951099/Nova-Travel-App" target="_blank" rel="noopener noreferrer">Original on Behance</a></nav>
 </header>
 
 <main id="main">
@@ -83,10 +84,62 @@
 <article class="process-step"><span class="process-number">03 / DEVELOP</span><span class="process-icon"><svg class="step-svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 20 4.4-1 10.7-10.7a2.1 2.1 0 0 0-3-3L5.4 16 4 20Z"></path><path d="m14 7 3 3"></path></svg></span><h3>Develop</h3><p>Wireframes, user flows, first-click and preference tests.</p></article>
 <article class="process-step"><span class="process-number">04 / DELIVER</span><span class="process-icon"><svg class="step-svg" width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3.5"></rect><path d="m7.6 12.2 3.1 3.2 6-6.5"></path></svg></span><h3>Deliver</h3><p>Final interface design and moderated usability testing.</p></article></div>
 
-            <details class="method-details">
-        <summary><span><strong>Competitive review</strong><small>Expedia, KAYAK and Google Travel</small></span><span class="artifact-toggle" aria-hidden="true">+</span></summary>
-        <div class="method-details-content"><p>I compared booking, price comparison and planning experiences to understand what worked and where Nova could be simpler.</p>
-          <div class="compact-competitors"><span>Expedia · Booking options</span><span>KAYAK · Price comparisons</span><span>Google Travel · Connected planning</span></div>
+            <details class="method-details competitor-details">
+        <summary><span><strong>Competitive review</strong><small>Expedia, KAYAK and Google Travel · Research evidence</small></span><span class="artifact-toggle" aria-hidden="true">+</span></summary>
+        <div class="competitor-body">
+          <div class="competitor-intro">
+            <span class="small-label">RESEARCH / COMPETITIVE LANDSCAPE</span>
+            <h3>What existing platforms did well, and what was still difficult.</h3>
+            <p>I looked at three different approaches to travel planning during the bootcamp. The goal wasn't to copy their interfaces. It was to understand where travelers gained convenience and where they might still need clearer guidance.</p>
+          </div>
+          <div class="competitor-grid">
+            <article class="competitor-entry">
+              <h4>Expedia</h4>
+              <p class="competitor-type">Online travel agency</p>
+              <div><span>WHAT WORKED</span><p>Broad booking options and bundled offers in one service.</p></div>
+              <div><span>WHAT FELT DIFFICULT</span><p>Many choices and competing elements can make decisions feel crowded.</p></div>
+            </article>
+            <article class="competitor-entry">
+              <h4>KAYAK</h4>
+              <p class="competitor-type">Travel comparison engine</p>
+              <div><span>WHAT WORKED</span><p>Fast price comparisons and an efficient search experience.</p></div>
+              <div><span>WHAT FELT DIFFICULT</span><p>Continuing to third-party booking sites can fragment the journey.</p></div>
+            </article>
+            <article class="competitor-entry">
+              <h4>Google Travel</h4>
+              <p class="competitor-type">Connected trip discovery</p>
+              <div><span>WHAT WORKED</span><p>Search, maps and travel information connect naturally across services.</p></div>
+              <div><span>WHAT FELT DIFFICULT</span><p>Support and personal trip requirements aren't always addressed within one flow.</p></div>
+            </article>
+          </div>
+          <div class="competitor-evidence">
+            <div class="competitor-evidence-heading"><span class="small-label">FROM THE ORIGINAL RESEARCH</span><h4>Three snapshots from the analysis</h4><p>Select any image to view it at its original size.</p></div>
+            <div class="competitor-evidence-grid">
+              <figure class="competitor-evidence-main">
+                <a href="assets/competitive-feature-matrix.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size feature comparison matrix">
+                  <img src="assets/competitive-feature-matrix.png" width="648" height="534" loading="lazy" alt="Original feature comparison matrix for Expedia, KAYAK and Google Travel">
+                </a>
+                <figcaption><strong>Feature audit</strong><span>Compared booking, search, personalization and support across the three services.</span></figcaption>
+              </figure>
+              <figure>
+                <a href="assets/competitive-review-scorecard.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size KAYAK heuristic evaluation scores">
+                  <img src="assets/competitive-review-scorecard.png" width="779" height="327" loading="lazy" alt="KAYAK heuristic evaluation scorecard showing task orientation, navigation, page layout, search and other criteria">
+                </a>
+                <figcaption><strong>Heuristic evaluation</strong><span>The KAYAK evaluation recorded category scores and an 89% overall checklist score.</span></figcaption>
+              </figure>
+              <figure>
+                <a href="assets/competitive-review-radar.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-size KAYAK heuristic evaluation radar">
+                  <img src="assets/competitive-review-radar.png" width="487" height="305" loading="lazy" alt="KAYAK heuristic evaluation radar across nine interface quality criteria">
+                </a>
+                <figcaption><strong>Evaluation at a glance</strong><span>A visual summary of the same KAYAK heuristic assessment.</span></figcaption>
+              </figure>
+            </div>
+            <p class="competitor-source-note">These are records from my bootcamp research, not screenshots of the competitors' current interfaces. The checklist reflects this project's evaluation method.</p>
+          </div>
+          <div class="competitor-takeaway">
+            <span class="small-label">WHAT I TOOK INTO NOVA</span>
+            <p>Keep the convenience of broad travel discovery, but give people a simpler starting point, clearer information about what a package includes, and an easy place to return to their trips.</p>
+          </div>
         </div>
       </details>
       <details class="artifact-details">
@@ -166,9 +219,37 @@
             <div class="flow-story"><span class="small-label">BOOKING JOURNEY</span><h3>From choosing a trip to confirming it.</h3>
         <ol aria-label="Booking steps"><li>Choose an option</li><li>Enter details</li><li>Compare results</li><li>Review the price</li><li>Confirm booking</li></ol>
       </div>
-            <details class="method-details wireframe-details">
-        <summary><span><strong>From wireframe to final UI</strong><small>The sign-in screen, before and after visual design</small></span><span class="artifact-toggle" aria-hidden="true">+</span></summary>
-        <div class="wireframe-visual"><figure><div class="device-mockup device-mockup--mini" role="img" aria-label="Sign-in wireframe"><span class="device-screen"><img src="assets/wireframe-signin.png" alt="" loading="lazy"></span><span class="device-camera" aria-hidden="true"></span><span class="device-side-key" aria-hidden="true"></span></div><figcaption>Wireframe</figcaption></figure><figure><div class="device-mockup device-mockup--mini" role="img" aria-label="Final Nova sign-in screen"><span class="device-screen"><img src="assets/app-sign-in-hd.png" alt="" loading="lazy"></span><span class="device-camera" aria-hidden="true"></span><span class="device-side-key" aria-hidden="true"></span></div><figcaption>Final UI</figcaption></figure></div>
+            <details class="method-details wireframe-details" open>
+        <summary><span><strong>From wireframe to final UI</strong><small>Explore 3 original screen comparisons</small></span><span class="artifact-toggle" aria-hidden="true">+</span></summary>
+        <div class="wireframe-switcher">
+          <p class="wireframe-switcher-intro">I started by setting the structure and flow. Choose a screen to see how its layout developed into the final interface.</p>
+          <div class="wireframe-tablist" role="tablist" aria-label="Choose a screen comparison">
+            <button type="button" role="tab" data-wireframe-tab="book" id="wireframe-tab-book" aria-controls="wireframe-panel-book" aria-selected="true" tabindex="0">Book home</button>
+            <button type="button" role="tab" data-wireframe-tab="trips" id="wireframe-tab-trips" aria-controls="wireframe-panel-trips" aria-selected="false" tabindex="-1">My Trips</button>
+            <button type="button" role="tab" data-wireframe-tab="signin" id="wireframe-tab-signin" aria-controls="wireframe-panel-signin" aria-selected="false" tabindex="-1">Sign in</button>
+          </div>
+          <div class="wireframe-panel" id="wireframe-panel-book" role="tabpanel" aria-labelledby="wireframe-tab-book">
+            <div class="wireframe-panel-intro"><h4>Start a search in one place</h4><p>The initial structure grouped travel options and recent searches. The final design keeps that hierarchy while making the categories easier to scan.</p></div>
+            <div class="wireframe-showcase">
+              <figure><span class="wireframe-stage-label">Wireframe</span><div class="device-mockup device-mockup--mini" role="img" aria-label="Book home low fidelity wireframe"><span class="device-screen"><img src="assets/wireframe-book-original.png" alt="" loading="lazy"></span><span class="device-camera" aria-hidden="true"></span><span class="device-side-key" aria-hidden="true"></span></div><figcaption>Low fidelity</figcaption></figure>
+              <figure><span class="wireframe-stage-label">Final UI</span><div class="device-mockup device-mockup--mini" role="img" aria-label="Book home final interface"><span class="device-screen"><img src="assets/app-home-hd.png" alt="" loading="lazy"></span><span class="device-camera" aria-hidden="true"></span><span class="device-side-key" aria-hidden="true"></span></div><figcaption>Visual design</figcaption></figure>
+            </div>
+          </div>
+          <div class="wireframe-panel" id="wireframe-panel-trips" role="tabpanel" aria-labelledby="wireframe-tab-trips" hidden>
+            <div class="wireframe-panel-intro"><h4>Find plans without searching again</h4><p>Both versions put upcoming, saved and past trips together. The visual design adds clearer statuses and grouping.</p></div>
+            <div class="wireframe-showcase">
+              <figure><span class="wireframe-stage-label">Wireframe</span><div class="device-mockup device-mockup--mini" role="img" aria-label="My Trips low fidelity wireframe"><span class="device-screen"><img src="assets/wireframe-my-trips-original.png" alt="" loading="lazy"></span><span class="device-camera" aria-hidden="true"></span><span class="device-side-key" aria-hidden="true"></span></div><figcaption>Low fidelity</figcaption></figure>
+              <figure><span class="wireframe-stage-label">Final UI</span><div class="device-mockup device-mockup--mini" role="img" aria-label="My Trips final interface"><span class="device-screen"><img src="assets/app-my-trips-hd.png" alt="" loading="lazy"></span><span class="device-camera" aria-hidden="true"></span><span class="device-side-key" aria-hidden="true"></span></div><figcaption>Visual design</figcaption></figure>
+            </div>
+          </div>
+          <div class="wireframe-panel" id="wireframe-panel-signin" role="tabpanel" aria-labelledby="wireframe-tab-signin" hidden>
+            <div class="wireframe-panel-intro"><h4>Get into the app with less friction</h4><p>The early layout set out the essential fields and alternative sign-in options. The final screen improves hierarchy and visual consistency.</p></div>
+            <div class="wireframe-showcase">
+              <figure><span class="wireframe-stage-label">Wireframe</span><div class="device-mockup device-mockup--mini" role="img" aria-label="Sign in low fidelity wireframe"><span class="device-screen"><img src="assets/wireframe-signin.png" alt="" loading="lazy"></span><span class="device-camera" aria-hidden="true"></span><span class="device-side-key" aria-hidden="true"></span></div><figcaption>Low fidelity</figcaption></figure>
+              <figure><span class="wireframe-stage-label">Final UI</span><div class="device-mockup device-mockup--mini" role="img" aria-label="Sign in final interface"><span class="device-screen"><img src="assets/app-sign-in-hd.png" alt="" loading="lazy"></span><span class="device-camera" aria-hidden="true"></span><span class="device-side-key" aria-hidden="true"></span></div><figcaption>Visual design</figcaption></figure>
+            </div>
+          </div>
+        </div>
       </details>
             <p class="caption">Nova was created as a UX/UI bootcamp concept project, not a live booking service.</p>
     </div>
