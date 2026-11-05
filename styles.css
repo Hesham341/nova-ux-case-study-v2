@@ -358,3 +358,56 @@ img{display:block;max-width:100%}
 .survey-facts{grid-template-columns:1fr;margin-bottom:48px}
 .survey-facts>p{grid-column:auto}
 }
+
+/* Figma-source fidelity and evidence-led storytelling refinement */
+.wordmark-icon img{display:block;width:28px;height:28px;object-fit:contain}
+.problem-context{margin:20px 0 0;color:#6c798a;font-size:13px;line-height:1.8}
+.competitor-study{margin-top:32px;padding:29px 30px;border:1px solid #dde5ef;border-radius:16px;background:#fff}
+.competitor-intro h3{font-size:25px;line-height:1.3;margin:8px 0 10px}
+.competitor-intro p{font-size:14px;line-height:1.8;color:#65758b;max-width:850px}
+.competitor-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin-top:24px}
+.competitor-grid article{padding:19px 20px;border:1px solid #e4eaf3;background:#f9fbfe;border-radius:11px}
+.competitor-grid span{font-size:10px;color:#2368c8;letter-spacing:.12em;font-weight:800}
+.competitor-grid h4{font-size:17px;margin-top:8px;margin-bottom:7px}
+.competitor-grid p{font-size:12px;color:#60718a;line-height:1.7}
+.competitor-takeaway{font-size:13px;color:#4f6179;line-height:1.8;background:#eff5ff;padding:15px 17px;border-radius:10px;margin-top:18px}
+.competitor-takeaway strong{color:#2453a0}
+.research-to-design{margin-bottom:72px}
+.rtd-heading{margin-bottom:20px}
+.rtd-heading h3{font-size:27px;margin:8px 0 0;max-width:700px}
+.rtd-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
+.rtd-grid article{background:#f5f9ff;border:1px solid #e2eaf6;border-radius:12px;padding:21px 20px}
+.rtd-grid span,.rtd-grid strong{font-size:10px;letter-spacing:.095em;font-weight:800;color:#6684b1;display:block}
+.rtd-grid strong{color:#2165b7;margin-top:21px}
+.rtd-grid p{font-size:13px;line-height:1.7;color:#465c7b;margin-top:7px}
+.transparency-feature{display:grid;grid-template-columns:1fr 1fr;margin-top:20px;background:#f4f9ff;border-radius:20px;overflow:hidden;min-height:530px;border:1px solid #e3eaf5}
+.transparency-art{background:radial-gradient(circle at 50% 48%,#dceafa,#c7def8);display:grid;place-items:center;padding:24px 40px;overflow:hidden}
+.transparency-art img{width:230px;height:auto;filter:drop-shadow(0 16px 20px rgba(32,58,99,.16))}
+.transparency-copy{display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:55px}
+.transparency-copy h3{font-size:clamp(26px,3.1vw,37px);line-height:1.3;margin:18px 0}
+.transparency-copy p{font-size:15px;line-height:1.9;color:#566a86}
+.flow-story{margin-top:22px;background:#fff;border-radius:16px;border:1px solid #dfe8f3;padding:29px}
+.flow-story h3{font-size:23px;margin:7px 0}
+.flow-story p{font-size:13px;color:#68788f;line-height:1.8}
+.flow-story ol{margin:21px 0 0;list-style:none;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));padding:0;gap:10px;counter-reset:stage}
+.flow-story li{font-size:12px;line-height:1.5;color:#284f83;font-weight:700;min-width:0;position:relative;background:#f0f6ff;border:1px solid #d5e5fa;border-radius:9px;padding:18px 10px 18px 32px;counter-increment:stage}
+.flow-story li:before{content:counter(stage,decimal-leading-zero);color:#0c66c9;font-size:10px;position:absolute;left:10px;top:20px}
+@media(max-width:930px){
+ .competitor-study{padding:24px}.competitor-grid{gap:10px}
+ .transparency-copy{padding:35px}.transparency-art img{width:205px}
+ .flow-story ol{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:690px){
+ .competitor-study{padding:22px 18px}
+ .competitor-grid,.rtd-grid{grid-template-columns:1fr}
+ .competitor-grid{gap:10px;margin-top:18px}
+ .competitor-grid article{padding:16px 17px}
+ .research-to-design{margin-bottom:51px}
+ .transparency-feature{grid-template-columns:1fr;min-height:0}
+ .transparency-art{padding:26px 20px}.transparency-art img{width:170px}
+ .transparency-copy{padding:31px 25px 36px}.transparency-copy h3{font-size:27px}
+ .flow-story{padding:23px 18px}
+ .flow-story ol{grid-template-columns:1fr 1fr;gap:8px}
+ .flow-story li{padding:14px 8px 14px 32px}
+ .flow-story li:before{top:16px}
+}

@@ -1,12 +1,10 @@
 # Nova UX Case Study · V2
 
-A simpler, source-grounded editorial presentation of Hesham Shahwan's **Nova Travel** UX/UI case study.
+A simpler, source-grounded, solo-course-project editorial presentation of Hesham Shahwan's **Nova Travel** UX/UI case study.
 
 **Live:** https://hesham341.github.io/nova-ux-case-study-v2/
 
 **Source of truth:** [Original Figma project](https://www.figma.com/design/kJxHsQFszhQFYbSMobkirQ/Portfolio?node-id=0-1)
-
-**Original publication:** [Behance case study](https://www.behance.net/gallery/243951099/Nova-Travel-App)
 
 ## What changed
 
@@ -26,4 +24,12 @@ Files under \`assets/\` are direct exports or rendered source nodes from the use
 
 The Figma integration returned blank 1×1 renders for some large prototype frames. Those were intentionally excluded rather than replaced with inaccurate visual recreations. All incorporated assets are stored locally in this repository.
 
-Original Behance and Figma files remain unchanged.
+The source Figma file remains unchanged.
+
+## QA correction notes
+- Restored the original Figma Nova logo and replaced approximate branding.
+- Expanded competition and research-to-design evidence with documented competitor research and documented research insights.
+- Added original package card to the main solution so price visibility is shown where it is explained.
+- Labeled the project as a solo course project, rather than an ambiguous professional independent product.
+- Scoped unvalidated offline and sharing ideas as future opportunities, not shipped features.
+- Removed Behance references from the published case study; original Figma is the source of truth.
