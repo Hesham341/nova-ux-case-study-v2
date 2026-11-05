@@ -1,35 +1,25 @@
-# Nova UX Case Study · V2
+# Nova Travel | UX Case Study
 
-A simpler, source-grounded, solo-course-project editorial presentation of Hesham Shahwan's **Nova Travel** UX/UI case study.
+An editorial case study presenting the research, design decisions, prototype screens and usability findings behind Nova Travel, a solo UX/UI course project by Hesham Shahwan.
 
-**Live:** https://hesham341.github.io/nova-ux-case-study-v2/
+## Live site
 
-**Source of truth:** [Original Figma project](https://www.figma.com/design/kJxHsQFszhQFYbSMobkirQ/Portfolio?node-id=0-1)
+https://hesham-nova-case-study.pages.dev/
 
-## What changed
+## What's inside
 
-- Removed approximate/reimagined app screens and placeholders.
-- Replaced phone mockups, persona portraits, key final UI screens, wireframe example and hotel-card before/after with **original exports from the Figma source file**.
-- Focused the storytelling on problem → research → design decisions → final UI → usability findings → iteration.
-- Preserved exact moderated-testing results from the original Nova research: 5 participants; 3 tasks; 100% success per task; times 2m26s, 3m35s, 16s; SEQ 5.4, 5.0, 6.6.
-- Clearly labeled this as a *design concept* rather than a live travel product.
+- The travel-planning problem, user research, competitor analysis and personas.
+- Research findings connected to specific interface decisions.
+- An original mobile booking concept, journey map and sitemap.
+- Five moderated usability sessions with task success, completion time and ease ratings.
+- Iteration examples, including a before-and-after hotel result card.
 
-## Site
+## Implementation
 
-Simple static HTML, CSS, and JavaScript with no backend, no client framework, and no external image dependencies. Font requests use Google Fonts with system fallbacks.
+A static HTML, CSS and JavaScript website, hosted on Cloudflare Pages and connected to this GitHub repository.
 
-## Asset provenance
+The images in `assets/` are project presentation assets. The persona portraits are illustrative and are not photographs of test participants. Nova is a concept project, not a live booking service.
 
-Files under \`assets/\` are direct exports or rendered source nodes from the user's original Figma design file. They're included as static editorial case-study images (not newly invented screens). The persona portraits are original Figma persona representations, **not** photos of the test participants.
+## Deployment
 
-The Figma integration returned blank 1×1 renders for some large prototype frames. Those were intentionally excluded rather than replaced with inaccurate visual recreations. All incorporated assets are stored locally in this repository.
-
-The source Figma file remains unchanged.
-
-## QA correction notes
-- Restored the original Figma Nova logo and replaced approximate branding.
-- Expanded competition and research-to-design evidence with documented competitor research and documented research insights.
-- Added original package card to the main solution so price visibility is shown where it is explained.
-- Labeled the project as a solo course project, rather than an ambiguous professional independent product.
-- Scoped unvalidated offline and sharing ideas as future opportunities, not shipped features.
-- Removed Behance references from the published case study; original Figma is the source of truth.
+Production is published from the `main` branch via Cloudflare Pages. The public website and this repository deliberately do not link to private working design documents.
